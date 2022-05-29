@@ -1,24 +1,23 @@
 <?php
 $request = $_SERVER['REQUEST_URI'];
-$pathFromRoot = '';
 
 switch ($request)
 {
-    case strpos($request, "$pathFromRoot/registrieren?"):
+    case strpos($request, "/registrieren?"):
     case "/registrieren":
         require_once 'controller/registrierenController.php';require_once 'controller/registrierenController.php';
         break;
-    case "$pathFromRoot/":
-    case "$pathFromRoot/home":
+    case "/":
+    case "/home":
         require_once 'controller/homeController.php';
         break;
-   case strpos($request, "$pathFromRoot/ajax?emailCheck"):
+    case strpos($request, "/ajax?emailCheck"):
         require_once 'ajaxPhp/ajaxEmailCheck.php';
         break;
-    case "$pathFromRoot/profil":
+    case "/profil":
         require_once 'controller/profilController.php';
         break;
-    case "$pathFromRoot/markt":
+    case "/markt":
         require_once 'controller/marktController.php';
         break;
     default:
