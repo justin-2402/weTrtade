@@ -4,15 +4,15 @@ $pathFromRoot = '';
 
 switch ($request)
 {
+    case strpos($request, "$pathFromRoot/registrieren?"):
+    case "/registrieren":
+        require_once 'controller/registrierenController.php';require_once 'controller/registrierenController.php';
+        break;
     case "$pathFromRoot/":
     case "$pathFromRoot/home":
         require_once 'controller/homeController.php';
         break;
-    case str_contains($request, "$pathFromRoot/registrieren?"):
-    case "$pathFromRoot/registrieren":
-        require_once 'controller/registrierenController.php';
-        break;
-    case str_contains($request, "$pathFromRoot/ajax?emailCheck"):
+   case strpos($request, "$pathFromRoot/ajax?emailCheck"):
         require_once 'ajaxPhp/ajaxEmailCheck.php';
         break;
     case "$pathFromRoot/profil":
@@ -21,7 +21,6 @@ switch ($request)
     case "$pathFromRoot/markt":
         require_once 'controller/marktController.php';
         break;
-
     default:
         require_once 'controller/notFoundController.php';
         break;
