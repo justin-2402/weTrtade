@@ -5,7 +5,7 @@ switch ($request)
 {
     case strpos($request, "/registrieren?"):
     case "/registrieren":
-        require_once 'controller/registrierenController.php';require_once 'controller/registrierenController.php';
+        require_once 'controller/registrierenController.php';
         break;
     case "/":
     case "/home":
@@ -19,6 +19,9 @@ switch ($request)
         break;
     case "/markt":
         require_once 'controller/marktController.php';
+        break;
+    case '/ajax':
+        require_once 'ajaxPhp/ajaxMarktdaten.php';
         break;
     default:
         require_once 'controller/notFoundController.php';

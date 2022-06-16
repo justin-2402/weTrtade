@@ -1,0 +1,8 @@
+.marktUebersichtDaten, .marktUebersichtHead, #marktUebersichtTable, #marktUebersichtHeadZeile
+{
+    border:2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 120%;
+    padding: 3px;
+}

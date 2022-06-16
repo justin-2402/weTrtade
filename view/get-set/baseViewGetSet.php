@@ -30,7 +30,7 @@ class baseViewGetSet
     /**
      * @param array $cssLinksHtmlForm
      */
-    public function setCssLinksHtmlForm(array $cssLinksHtmlForm): void
+    public function setCssLinksHtmlFormat(array $cssLinksHtmlForm): void
     {
         $this->cssLinksHtmlForm = $this->formatCssLinks($cssLinksHtmlForm);
     }
